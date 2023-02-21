@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<form>
+    @* <div style="border: 75px; ," ></div> *@
+<body class="body" style="background-color: cornsilk;">
+            <h2>@ViewData["Title"]</h2>
+
+            <div class="content">
+                @* <p id="best"> *@
+                    <span>Dilakh Meadia </span>
+                </p>
+                <div class="option " >
+                <div style="justify-content: space-between; display:flex; ">
+                    <div>
+                 <a asp-controller = "Home" asp-action = "LogIn" ><div id="btn"> Login</div></a>
+                      </div>
+                 
+                  <div>
+                                      <a asp-controller = "Customer" asp-action = "CreateCustomer" ><div id="btn">Sign Up</div></a>
+
+                  </div>
+                        @* <button asp-controller="Home" asp-action="Login" >Login</button>
+                        <a asp-controller = "Customer" asp-action = "CreateCustomer" ><div id="btn">Sign Up</div></a> *@
+
+                    
+                
+                </div>
+</body>
+@* justify-content: space-between; display:flex; *@
+</form>
+
+
+
+@* <button asp-controller="Customer" asp-action="CustomerDashborad" >Login</button> *@
+                        @* <button asp-controller="Admin" asp-action="AdminDashboard" > Login</button> *@
+                        @* <img src="wwwroot\images (7).jpeg" alt=""> *@
+                   
+
+    @* <div>
+                        <button > <a asp-controller="Customer" asp-action="CreateCustomer"> Sign Up</a></button>  *@
+                            @* <button style="border: 1px solid red; height:100px; width:55px; flex-direction:4,2" asp-controller="Customer" asp-action="CreateCustomer"> Sign Up</a></button> *@
+                            @* <button > <a asp-controller="Admin" asp-action="CreateAdmin"> Sign Up</a></button> *@
+                            @* <button > <a asp-controller="Admin" asp-action="CreateAdmin"> Sign Up</a></button> *@
+                    @* </div> *@
+

@@ -1,0 +1,57 @@
+@model MovieMvcDate.Models.Dto.RequestModel.CreateMovieRequestmodel
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                @*<label asp-for="" class="control-label"></label>*@
+
+                <input type="file" name="incomingFiles" class="form-control" />
+
+                <label asp-for="MovieName"></label>
+                <input asp-for="MovieName">
+                
+                <label asp-for="Director"></label>
+                <input asp-for="Director">
+                
+                <label asp-for="Year"></label>
+                <input asp-for="Year">
+                
+                <label asp-for="MoviePrice"></label>
+                <input asp-for="MoviePrice">
+         
+
+                <div>
+
+                    @*<button class="btn btn-dark" type="submit" asp-controller="File" asp-action="FileOnlineAction">Online Upload</button>*@
+                    <button type="submit" class="btn btn-danger " asp-controller="Movie" asp-action="Create"> Upload</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@* <form asp-action="Create" asp-controller="Movie" method="post" enctype="multipart/form-data">
+    <label>MovieName</label>
+    <input type="text" name="MovieName">
+    <label>Director</label>
+    <input type="text" name="Director">
+    <label>Year</label>
+    <input type="number" name="Year">
+    <label>MovieFlieType</label>
+    <input type="file" name="MovieFlieType">
+    <label>MoviePrice</label>
+    <input type="number" name="MoviePrice">
+<input type="submit" name="answer" value="RunRegisterdJob" />
+</form> *@
+
+
+@* lic string MovieName { get; set; }
+        public string Director { get; set; }
+        public int Year { get; set; }
+        public IFormFile MovieFlieType { get; set; }
+        public double MoviePrice { get; set; } *@

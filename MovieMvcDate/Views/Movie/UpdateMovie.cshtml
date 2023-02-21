@@ -1,0 +1,37 @@
+ @model MovieMvcDate.Models.Dto.RequestModel.UpdateMovieResponceModel
+ 
+
+  <div>
+    <p>Edit Admin</p>
+        <hr>
+        <form asp-action ="UpdateMovie" >
+            <div>
+               <input asp-for ="Id" name="Id" value="@Model.Id" hidden/>
+           <div>
+            <div>
+             <div class ="md-2"></div>
+             <label asp-for = "Director"></label>
+            <input asp-for ="Director" name="Director" value="@Model.Director"/>
+        </div>
+            <div>
+             <div class ="md-2"></div>
+             <label asp-for = "Year"></label>
+            <input asp-for ="Year" name="Year" value="@Model.Year"/>
+        </div>
+            <div>
+             <div class ="md-2"></div>
+             <label asp-for = "MovieName"></label>
+            <input asp-for ="MovieName" name="MovieName" value="@Model.MovieName"/>
+            </div>
+
+              <div>
+            <div class ="form-group"></div>
+            <input href="#myModal" type="submit" value="Submit" class="btn btn-success trigger-btn col-sm-12" data-toggle="modal" />
+        </div>
+            <button>
+              <a asp-controller="Movie" asp-action="UpdateMovie">Back to List</a>
+
+            </button>
+        </form>
+</hr>
+

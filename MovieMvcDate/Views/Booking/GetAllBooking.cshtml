@@ -1,0 +1,76 @@
+@model IEnumerable<MovieMvcDate.Models.Entites.BookingCustomer>
+
+     @if(ViewData["Title"] != null)
+    {
+        <h2>
+            @TempData["success"]
+        </h2>
+
+    }
+
+
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary">All Bookings</h2>
+    </div>
+    <div>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    MovieName
+                </th>
+                <th>
+                   Price
+                </th>
+                <th>
+                    IsActive
+                </th>
+                <th>
+                    Email
+                </th>
+                @* <th>
+                    IsdDleted
+                </th> *@
+            </tr>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>
+                        @booking.MovieName
+                    </td>
+                    <td>
+                        @booking.Price
+                    </td>
+                    <td>
+                        @booking.Email
+                    </td>
+                    <td>
+                        @booking.SitNumber
+                    </td>
+                    @* <td>
+                        @admin.Password
+                    </td> *@
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Booking" asp-action = "DeleteBooking" asp-route-Id = "@booking.Id"><i class ="bi bi-trash"></i>Delete  </a>
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Booking" asp-action = "UpdateBooking" asp-route-Id = "@booking.Id"><i class ="bi bi-penil-fill"></i>UpdateAdmin</a>
+                    </td>
+                    <td>
+                        <a asp-controller = "Booking" asp-action = "Details" asp-route-Id = "@booking.Id"><i class ="bi bi-info-lg"></i> Details </a>
+                    </td>
+                    <script>
+                        function myFuntion()
+                        {
+                           alert("Do you want to proceed ?")  
+                        }
+                    </script>
+                </tr>
+            }
+            </table>
+        </div>
+    </div>
+    </div>

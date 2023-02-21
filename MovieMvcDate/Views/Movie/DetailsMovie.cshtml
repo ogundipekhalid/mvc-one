@@ -1,0 +1,55 @@
+@* @model MovieMvcDate.Models.Dto.RequestModel.MovieResponceModel *@
+@using MovieMvcDate.Models.Dto.RequestModel
+@model MovieResponceModel
+
+@* @{
+    ViewData["Title"] = "Details";
+} *@
+<div>
+    <h6>Details of Movie</h6>
+    <hr/>
+   <dl>
+    <dt>
+    </dt>
+         <dt>
+            <h4>@Html.DisplayNameFor( model=>model.Data.MovieName): </h4>
+        </dt>
+         <dd>
+            <h4>@Html.DisplayFor( model=>model.Data.MovieName ) </h4>
+        </dd>
+         <dt>
+            <h4>@Html.DisplayNameFor( model=>model.Data.Director): </h4>
+        </dt>
+         <dd>
+            <h4>@Html.DisplayFor( model=>model.Data.Director ) </h4>
+        </dd>
+        <dt>
+            <h4>@Html.DisplayNameFor( model=>model.Data.Moviedate ) :</h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model =>model.Data.Moviedate) </h4>
+        </dd>
+         <dt>
+            <h4>@Html.DisplayNameFor(model => model.Data.MovieFliePath): </h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Data.MovieFliePath) </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Data.TimeCreted) : </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Data.TimeCreted) </h4>
+        </dd>
+        <dt>
+          <h4>@Html.DisplayFor(model => model.Data.MoviePrice) :  </h4>
+        </dt>
+        <dd>
+          <h4>@Html.DisplayFor(model => model.Data.MoviePrice) </h4>
+        </dd>
+   </dl>
+</div>
+   <button style="background-color: slateblue;" ><a asp-controller= "movie" asp-action="ViewAllMovie">Back to List</a></button>
+

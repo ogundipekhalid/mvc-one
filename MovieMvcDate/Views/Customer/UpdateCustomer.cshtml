@@ -1,0 +1,65 @@
+@model MovieMvcDate.Models.Dto.RequestModel.CreateCustomerRequestmodel
+
+@{
+    ViewData["Title"] = "UpdateCustomer";
+    if (TempData["Success"] != null)
+    {
+        <h2>@TempData["success"]</h2>
+    }
+}
+<div>
+    <p>Update custormer</p>
+    @* <form asp-action="UpdateAdmin" method="post" style="font-size: medium;"> *@
+@* <div asp-controller = "Admin" asp-action="UpdateAdmin" style="font-size: medium;"></div> *@
+        <hr>
+        <form asp-action ="UpdateCustomer">
+            
+             <div>
+             
+         <div>
+             <div class ="md -3"></div>
+             @* <label> Id</label> *@
+            <input asp-for ="Id" name="Id" value="@Model.Id"  hidden/>
+        </div>
+        <div class ="md -3"></div>
+             @* <label> RefNumber </label> *@
+          <input asp-for ="RefNumber" name="RefNumber" value="@Model.RefNumber" />
+        </div>
+           <div>
+             <div class ="md-3"></div>
+             <label asp-for = "FirstName"></label>
+            <label>FirstName</label>
+            <input asp-for ="FirstName" name="FirstName"  class = "form-control" value="@Model.FirstName"/>
+        </div>
+       <div>
+            <div class ="md-3"></div>
+            <label asp-for = "LastName"></label>
+            <label >LastName</label>
+            <input asp-for ="LastName" name="LastName" class = "form-control" value="@Model.LastName"/>
+        </div>
+         <div>
+            <div class ="md-3"></div>
+            <label asp-for = "Email"></label>
+            <input asp-for ="Email" name="Email" type="email" class = "form-control" value="@Model.Email"/>
+        </div>
+        <div>
+            <div class ="md-3"></div>
+            <label asp-for = "Password"></label>
+            <input asp-for ="Password" name="Password" type="text" class = "form-control"/>
+        </div>
+        @* <div>
+            <div class ="md-3" hidden></div>
+            <label asp-for = "RefNumber"></label>
+            <input asp-for ="RefNumber" name="RefNumber" type="text" class = "form-control"/>
+        </div> *@
+        <div>
+            <div class ="form-group"></div>
+                   <input href="#myModal" type="submit" value="Submit" class="btn btn-success trigger-btn col-sm-12" data-toggle="modal" />
+        </div>
+        <div>
+            </button>
+                   <a asp-controller="Customer" asp-action="UpdateCustomer">Back to List</a>        
+            </button>
+        </div>
+    </form>
+</div>

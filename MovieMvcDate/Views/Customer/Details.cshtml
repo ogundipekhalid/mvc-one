@@ -1,0 +1,62 @@
+@* @model MovieMvcDate.Models.Dto.RequestModel.CustomerDto *@
+@using MovieMvcDate.Models.Dto.RequestModel
+@model CreateCustomerRequestmodel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h6>Customer Details </h6>
+    <hr/>
+   <dl>
+        <dd>
+            <h4>@Html.DisplayNameFor(model => model.RefNumber): </h4>
+          </dd>
+          <dd>
+            <h4>@Html.DisplayFor(model => model.RefNumber): </h4>
+          </dd>
+         <dt>
+            <h4>@Html.DisplayNameFor( model=>model.FirstName) </h4>
+        </dt>
+         <dd>
+            <h4>@Html.DisplayFor( model=>model.FirstName ) </h4>
+        </dd>
+        <dt>
+            <h4>@Html.DisplayNameFor( model=>model.LastName ) </h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model =>model.LastName) </h4>
+        </dd>
+         <dt>
+            <h4>@Html.DisplayNameFor(model => model.Email) </h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Email) </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayNameFor(model=> model.PhoneNumber) </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.PhoneNumber) </h4>
+        </dd>
+        <dt>
+          <dd>
+            <h4>@Html.DisplayNameFor(model => model.Password): </h4>
+          </dd>
+          <dd>
+            <h4>@Html.DisplayFor(model => model.Password): </h4>
+          </dd>
+
+        </dt>
+   </dl>
+</div>
+     <button style="background-color: slateblue;" ><a asp-controller= "Customer" asp-action="GetAllCustomer">Back to List</a></button>
+
+    @* <form asp-action="Details" asp-route-AdminId=@Model.Id>
+        <input type="submit" value="Details" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>  *@
+</div>

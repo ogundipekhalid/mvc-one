@@ -1,0 +1,47 @@
+@model MovieMvcDate.Models.Dto.RequestModel.UserDto
+
+@* @{
+    Layout = null;
+} *@
+
+@* <style>
+    *:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+</style> *@
+
+
+
+<head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+</div>
+    <form asp-action="LogIn" enctype="multipart/form-data">
+     <label asp-for="Email" for="username">Email</label>
+        <input id="email" asp-for="Email" type="email" placeholder="ola@gmail.com" >
+         <span asp-validation-for="Email" class="text-danger"></span>
+
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" type="password" id="password" name="password"  />
+            <span asp-validation-for="Password" class="text-danger"></span> 
+        
+        <button type="submit" value="Submit">Log In</button>
+        <div class="social"  style="justify-content: space-between; display:flex; ">
+ 
+          <div class="go"><a asp-controller="Customer" asp-action="CreateCustomer"> Sign Up</a></div> &nbsp; &nbsp; 
+           <div class="go"><a asp-controller="Admin" asp-action="CreateAdmin"> Sign Up</a></div> &nbsp; &nbsp;
+
+           <div class="go"><a asp-controller="Home" asp-action="Index">Home</a></div>
+        </div>
+
+    </form>
+    </body>
+     </head>
